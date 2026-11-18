@@ -1,0 +1,29 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+.DS_Store
+
+# Metadata databases are built from someone's application, not kept here.
+*.sqlite
+*.sqlite3
+
+# No Oracle module belongs in this repository: the tests build their own
+# from XML. Anything copied here to try the server stays on that machine.
+*.fmb
+*.mmb
+*.pll
+*.olb
+*.rdf
+*.fmx
+*.mmx
+*.plx
+*.rep
+*.rex
+*_fmb.xml
+*_mmb.xml
+*_pll.xml
+*_olb.xml
+*_rdf.xml

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqling-mcp"
+dynamic = ["version"]
+description = "Ask an AI assistant about an Oracle Forms and Reports application: an MCP server over its metadata"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Data Design Group, Inc." }]
+requires-python = ">=3.10"
+dependencies = ["mcp>=2.0"]
+keywords = ["oracle", "oracle-forms", "oracle-reports", "fmb", "rdf", "plsql", "mcp", "model-context-protocol",
+            "legacy-modernization", "copilot", "claude"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Database",
+    "Topic :: Software Development :: Documentation",
+]
+
+[project.urls]
+Homepage = "https://sqling.com"
+Source = "https://github.com/sqling-com/sqling-mcp"
+Issues = "https://github.com/sqling-com/sqling-mcp/issues"
+Changelog = "https://github.com/sqling-com/sqling-mcp/blob/master/CHANGELOG.md"
+
+[project.scripts]
+sqling-mcp = "sqling_mcp.server:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "sqling_mcp.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
